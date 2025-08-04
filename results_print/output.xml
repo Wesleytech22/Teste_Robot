@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-01T08:42:10.689045" rpa="false" schemaversion="5">
+<suite id="s1" name="For" source="C:\Users\weale\OneDrive\Área de Trabalho\CURSOS COMPLEMENTARES\ROBOT FRAMEWORK\Projeto\Loops\for.robot">
+<test id="s1-t1" name="Teste FOR usando varias variaveis" line="5">
+<kw name="Criar dicionario de traducoes">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-08-01T08:42:10.720835" level="INFO">@{english} = [ cat | dog | horse ]</msg>
+<var>@{english}</var>
+<arg>cat</arg>
+<arg>dog</arg>
+<arg>horse</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-08-01T08:42:10.720649" elapsed="0.000239"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-08-01T08:42:10.721306" level="INFO">@{finnish} = [ kissa | koira | hevonen ]</msg>
+<var>@{finnish}</var>
+<arg>kissa</arg>
+<arg>koira</arg>
+<arg>hevonen</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-08-01T08:42:10.721066" elapsed="0.000289"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-08-01T08:42:10.721626" level="INFO">@{portugues} = [ gato | cachorro | cavalo ]</msg>
+<var>@{portugues}</var>
+<arg>gato</arg>
+<arg>cachorro</arg>
+<arg>cavalo</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-08-01T08:42:10.721503" elapsed="0.000143"/>
+</kw>
+<for flavor="IN ZIP">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T08:42:10.722088" level="INFO">Em ingles: cat | Em finlandes: kissa | Em portugues: gato</msg>
+<arg>Em ingles: ${en_word} | Em finlandes: ${fi_word} | Em portugues: ${pt_word}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T08:42:10.721951" elapsed="0.000175"/>
+</kw>
+<var name="${en_word}">cat</var>
+<var name="${fi_word}">kissa</var>
+<var name="${pt_word}">gato</var>
+<status status="PASS" start="2025-08-01T08:42:10.721889" elapsed="0.000265"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T08:42:10.722432" level="INFO">Em ingles: dog | Em finlandes: koira | Em portugues: cachorro</msg>
+<arg>Em ingles: ${en_word} | Em finlandes: ${fi_word} | Em portugues: ${pt_word}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T08:42:10.722310" elapsed="0.000156"/>
+</kw>
+<var name="${en_word}">dog</var>
+<var name="${fi_word}">koira</var>
+<var name="${pt_word}">cachorro</var>
+<status status="PASS" start="2025-08-01T08:42:10.722253" elapsed="0.000240"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T08:42:10.722772" level="INFO">Em ingles: horse | Em finlandes: hevonen | Em portugues: cavalo</msg>
+<arg>Em ingles: ${en_word} | Em finlandes: ${fi_word} | Em portugues: ${pt_word}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T08:42:10.722639" elapsed="0.000191"/>
+</kw>
+<var name="${en_word}">horse</var>
+<var name="${fi_word}">hevonen</var>
+<var name="${pt_word}">cavalo</var>
+<status status="PASS" start="2025-08-01T08:42:10.722586" elapsed="0.000307"/>
+</iter>
+<var>${en_word}</var>
+<var>${fi_word}</var>
+<var>${pt_word}</var>
+<value>${english}</value>
+<value>${finnish}</value>
+<value>${portugues}</value>
+<status status="PASS" start="2025-08-01T08:42:10.721704" elapsed="0.001223"/>
+</for>
+<status status="PASS" start="2025-08-01T08:42:10.720251" elapsed="0.002737"/>
+</kw>
+<status status="PASS" start="2025-08-01T08:42:10.719523" elapsed="0.003622"/>
+</test>
+<status status="PASS" start="2025-08-01T08:42:10.690458" elapsed="0.033233"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="For" id="s1" pass="1" fail="0" skip="0">For</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

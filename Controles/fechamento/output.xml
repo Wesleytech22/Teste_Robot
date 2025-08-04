@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-01T09:14:23.496725" rpa="false" schemaversion="5">
+<suite id="s1" name="Teardowns" source="C:\Users\weale\OneDrive\Área de Trabalho\CURSOS COMPLEMENTARES\ROBOT FRAMEWORK\Projeto\Controles\teardowns.robot">
+<test id="s1-t1" name="Exemplo 03: Teste lidando com Suite e Test Teardowns" line="20">
+<kw name="Esse keyword vai passar sozinha">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>"May" == "May"</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-08-01T09:14:23.523969" elapsed="0.000164"/>
+</kw>
+<status status="PASS" start="2025-08-01T09:14:23.523599" elapsed="0.000611"/>
+</kw>
+<kw name="Essa keyword fará o teste falhar, não executando as keywords abaixo">
+<kw name="Fail" owner="BuiltIn">
+<msg time="2025-08-01T09:14:23.524694" level="FAIL">Estou forçando meu teste a falhar!</msg>
+<arg>msg=Estou forçando meu teste a falhar!</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2025-08-01T09:14:23.524530" elapsed="0.000277">Estou forçando meu teste a falhar!</status>
+</kw>
+<status status="FAIL" start="2025-08-01T09:14:23.524364" elapsed="0.000538">Estou forçando meu teste a falhar!</status>
+</kw>
+<kw name="Esse keyword vai passar sozinha">
+<status status="NOT RUN" start="2025-08-01T09:14:23.525089" elapsed="0.000023"/>
+</kw>
+<kw name="Esse keyword vai falhar sozinha">
+<status status="NOT RUN" start="2025-08-01T09:14:23.525332" elapsed="0.000020"/>
+</kw>
+<kw name="Controlando o teardown do teste" type="TEARDOWN">
+<kw name="Run Keyword If Test Passed" owner="BuiltIn">
+<arg>Log</arg>
+<arg>Meu teste passou, não preciso apagar dados do banco de dados, por exemplo!</arg>
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<status status="PASS" start="2025-08-01T09:14:23.525786" elapsed="0.000063"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T09:14:23.526097" level="INFO">Meu teste falhou, posso imprimir ou manter uma informação no banco de dados para analisar o erro, por exemplo!</msg>
+<arg>Meu teste falhou, posso imprimir ou manter uma informação no banco de dados para analisar o erro, por exemplo!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T09:14:23.526028" elapsed="0.000108"/>
+</kw>
+<arg>Log</arg>
+<arg>Meu teste falhou, posso imprimir ou manter uma informação no banco de dados para analisar o erro, por exemplo!</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-08-01T09:14:23.525924" elapsed="0.000249"/>
+</kw>
+<status status="PASS" start="2025-08-01T09:14:23.525609" elapsed="0.000605"/>
+</kw>
+<status status="FAIL" start="2025-08-01T09:14:23.522995" elapsed="0.003463">Estou forçando meu teste a falhar!</status>
+</test>
+<kw name="Controlando o teardown da suite" type="TEARDOWN">
+<kw name="Run Keyword If All Tests Passed" owner="BuiltIn">
+<arg>Log</arg>
+<arg>Todos os testes passaram, posso enviar um e-mail, por exemplo!</arg>
+<doc>Runs the given keyword with the given arguments, if all tests passed.</doc>
+<status status="PASS" start="2025-08-01T09:14:23.527250" elapsed="0.000076"/>
+</kw>
+<kw name="Run Keyword If Any Tests Failed" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T09:14:23.527583" level="INFO">Alguns testes falharam, posso enviar um e-mail, por exemplo!</msg>
+<arg>Alguns testes falharam, posso enviar um e-mail, por exemplo!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T09:14:23.527516" elapsed="0.000100"/>
+</kw>
+<arg>Log</arg>
+<arg>Alguns testes falharam, posso enviar um e-mail, por exemplo!</arg>
+<doc>Runs the given keyword with the given arguments, if one or more tests failed.</doc>
+<status status="PASS" start="2025-08-01T09:14:23.527401" elapsed="0.000254"/>
+</kw>
+<status status="PASS" start="2025-08-01T09:14:23.527122" elapsed="0.000572"/>
+</kw>
+<status status="FAIL" start="2025-08-01T09:14:23.498009" elapsed="0.029705"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Teardowns" id="s1" pass="0" fail="1" skip="0">Teardowns</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

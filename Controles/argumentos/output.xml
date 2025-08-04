@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-01T09:55:51.887493" rpa="false" schemaversion="5">
+<suite id="s1" name="Argumentos" source="C:\Users\weale\OneDrive\Área de Trabalho\CURSOS COMPLEMENTARES\ROBOT FRAMEWORK\Projeto\Controles\argumentos\argumentos.robot">
+<test id="s1-t1" name="Relembrando argumentos posicionais x nomeados" line="2">
+<kw name="Teste de Argumentos Básico">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T09:55:51.928401" level="INFO">1 - 2 - 3 - 4</msg>
+<arg>${arg1} - ${arg2} - ${arg3} - ${arg4}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T09:55:51.928219" elapsed="0.000235"/>
+</kw>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+<status status="PASS" start="2025-08-01T09:55:51.927798" elapsed="0.000725"/>
+</kw>
+<kw name="Teste de Argumentos Básico">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T09:55:51.929107" level="INFO">4 - 3 - 2 - 1</msg>
+<arg>${arg1} - ${arg2} - ${arg3} - ${arg4}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T09:55:51.928961" elapsed="0.000183"/>
+</kw>
+<arg>arg4=1</arg>
+<arg>arg3=2</arg>
+<arg>arg2=3</arg>
+<arg>arg1=4</arg>
+<status status="PASS" start="2025-08-01T09:55:51.928719" elapsed="0.000471"/>
+</kw>
+<status status="PASS" start="2025-08-01T09:55:51.927228" elapsed="0.002125"/>
+</test>
+<test id="s1-t2" name="Teste de Argumentos Opcionais" line="6">
+<kw name="Passando argumentos opcionais como parâmetro">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T09:55:51.930564" level="INFO">Nome completo: Mayara silva Fernandes</msg>
+<arg>Nome completo: ${nome} ${nome_do_meio} ${ultimo_nome}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T09:55:51.930441" elapsed="0.000157"/>
+</kw>
+<arg>nome=Mayara</arg>
+<arg>ultimo_nome=Fernandes</arg>
+<status status="PASS" start="2025-08-01T09:55:51.930224" elapsed="0.000421"/>
+</kw>
+<kw name="Passando argumentos opcionais como parâmetro">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T09:55:51.931163" level="INFO">Nome completo: Mayara Ribeiro Fernandes</msg>
+<arg>Nome completo: ${nome} ${nome_do_meio} ${ultimo_nome}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T09:55:51.931035" elapsed="0.000161"/>
+</kw>
+<arg>nome=Mayara</arg>
+<arg>nome_do_meio=Ribeiro</arg>
+<arg>ultimo_nome=Fernandes</arg>
+<status status="PASS" start="2025-08-01T09:55:51.930808" elapsed="0.000432"/>
+</kw>
+<status status="PASS" start="2025-08-01T09:55:51.929916" elapsed="0.001471"/>
+</test>
+<test id="s1-t3" name="Criando lista e dicionário via parâmetro" line="10">
+<kw name="Teste Criando um Dicionário">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T09:55:51.932264" level="INFO">{'cwd': '/home/user', 'shell': 'True', 'env': 'False'}</msg>
+<arg>${meu_dicionario}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T09:55:51.932172" elapsed="0.000127"/>
+</kw>
+<arg>cwd=/home/user</arg>
+<arg>shell=True</arg>
+<arg>env=False</arg>
+<status status="PASS" start="2025-08-01T09:55:51.931929" elapsed="0.000416"/>
+</kw>
+<kw name="Teste Criando uma Lista">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T09:55:51.932739" level="INFO">['may', 'ribeiro', 'fernandes']</msg>
+<arg>${minha_lista}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T09:55:51.932647" elapsed="0.000124"/>
+</kw>
+<arg>may</arg>
+<arg>ribeiro</arg>
+<arg>fernandes</arg>
+<status status="PASS" start="2025-08-01T09:55:51.932477" elapsed="0.000336"/>
+</kw>
+<kw name="Teste Criando os dois">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-01T09:55:51.933308" level="INFO">['may', 'ribeiro', 'fernandes']
+{'shell': 'True', 'env': 'False'}</msg>
+<arg>${minha_lista}\n${meu_dicionario}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-01T09:55:51.933189" elapsed="0.000153"/>
+</kw>
+<arg>may</arg>
+<arg>ribeiro</arg>
+<arg>fernandes</arg>
+<arg>shell=True</arg>
+<arg>env=False</arg>
+<status status="PASS" start="2025-08-01T09:55:51.932939" elapsed="0.000445"/>
+</kw>
+<doc>No Python é conhecido como "kwargs"</doc>
+<status status="PASS" start="2025-08-01T09:55:51.931667" elapsed="0.001825"/>
+</test>
+<status status="PASS" start="2025-08-01T09:55:51.891573" elapsed="0.042236"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Argumentos" id="s1" pass="3" fail="0" skip="0">Argumentos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
